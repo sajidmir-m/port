@@ -1,0 +1,209 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Mobile-first responsive design */
+@media (max-width: 640px) {
+  * {
+    touch-action: manipulation;
+  }
+  
+  .window-shadow {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+  }
+}
+
+/* Ensure proper viewport scaling */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/* Touch-friendly interactions */
+button, [role="button"] {
+  min-height: 44px;
+  min-width: 44px;
+  touch-action: manipulation;
+}
+
+@media (max-width: 640px) {
+  button, [role="button"] {
+    min-height: 48px;
+    min-width: 48px;
+  }
+}
+
+/* Enhanced responsive breakpoints */
+@media (min-width: 1024px) {
+  .window-shadow {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@media (min-width: 1280px) {
+  .desktop-large {
+    max-width: 1200px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .desktop-xl {
+    max-width: 1400px;
+  }
+}
+
+/* Smooth transitions for all screen sizes */
+* {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Optimize text rendering */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(20, 14.3%, 4.1%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(20, 14.3%, 4.1%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(60, 4.8%, 95.9%);
+  --secondary-foreground: hsl(24, 9.8%, 10%);
+  --accent: hsl(60, 4.8%, 95.9%);
+  --accent-foreground: hsl(24, 9.8%, 10%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(20, 14.3%, 4.1%);
+  --radius: 0.5rem;
+  
+  /* Light theme desktop colors */
+  --desktop-bg-light: linear-gradient(135deg, hsl(210, 100%, 90%) 0%, hsl(220, 100%, 85%) 30%, hsl(230, 100%, 88%) 70%, hsl(240, 100%, 92%) 100%);
+  --desktop-overlay-light: radial-gradient(circle at 20% 80%, hsla(210, 100%, 75%, 0.15) 0%, transparent 50%), 
+                          radial-gradient(circle at 80% 20%, hsla(230, 100%, 75%, 0.15) 0%, transparent 50%);
+  
+  /* Ubuntu-inspired colors */
+  --ubuntu-orange: hsl(14, 86%, 52%);
+  --ubuntu-purple: hsl(324, 31%, 35%);
+  --ubuntu-dark: hsl(300, 43%, 9%);
+  --ubuntu-gray: hsl(0, 0%, 17%);
+  --ubuntu-light: hsl(32, 7%, 68%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+  
+  /* Dark theme desktop colors */
+  --desktop-bg-dark: linear-gradient(135deg, var(--ubuntu-purple) 0%, var(--ubuntu-dark) 50%, hsl(270, 50%, 30%) 100%);
+  --desktop-overlay-dark: radial-gradient(circle at 20% 80%, hsla(14, 86%, 52%, 0.3) 0%, transparent 50%), 
+                         radial-gradient(circle at 80% 20%, hsla(324, 31%, 35%, 0.4) 0%, transparent 50%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Ubuntu', sans-serif;
+  }
+}
+
+@layer utilities {
+  .ubuntu-gradient {
+    background: var(--desktop-bg-dark);
+    background-image: var(--desktop-overlay-dark);
+  }
+  
+  .light .ubuntu-gradient {
+    background: var(--desktop-bg-light);
+    background-image: var(--desktop-overlay-light);
+  }
+  
+  .desktop-icon {
+    @apply transition-all duration-200 hover:bg-white hover:bg-opacity-10 rounded-lg;
+  }
+  
+  .window-shadow {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+  
+  .terminal-text {
+    font-family: 'Ubuntu Mono', 'Courier New', monospace;
+  }
+  
+  .matrix-bg {
+    background-image: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 255, 0, 0.03) 2px,
+      rgba(0, 255, 0, 0.03) 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 255, 0, 0.03) 2px,
+      rgba(0, 255, 0, 0.03) 4px
+    );
+    animation: matrix 20s linear infinite;
+  }
+  
+  .scanlines {
+    background: linear-gradient(
+      transparent 0%,
+      rgba(0, 255, 0, 0.1) 50%,
+      transparent 100%
+    );
+    animation: scan 2s linear infinite;
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 1s ease-in;
+  }
+}
+
+@keyframes matrix {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(20px); }
+}
+
+@keyframes scan {
+  0% { transform: translateY(-100vh); }
+  100% { transform: translateY(100vh); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

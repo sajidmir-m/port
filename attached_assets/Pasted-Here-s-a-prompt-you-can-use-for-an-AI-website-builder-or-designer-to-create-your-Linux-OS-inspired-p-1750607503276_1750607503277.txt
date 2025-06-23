@@ -1,0 +1,16 @@
+Here’s a prompt you can use for an AI website builder or designer to create your Linux OS-inspired portfolio, including your mobile number and email:
+
+Design a personal portfolio website for Sajid Nazir, styled to look like a Linux desktop environment. The homepage should resemble a Linux OS desktop, with a taskbar, desktop wallpaper, and draggable/resizable folder windows. Each folder window represents a section of my portfolio:
+
+- “My Projects”: Detailed write-ups for projects including:
+  - AI-Based Airport Baggage and Passenger Flow (AI-driven system for optimizing baggage handling and passenger flow)
+  - OSINT-Based Threat Profiling & Reconnaissance Framework (automation tool for cyber threat intelligence)
+  - Hexacopter-Based Firefighting Drone (low-cost drone prototype for fire response)
+- “About Me”: My profile, education (B.E. in Computer Science, MVJ College of Engineering; Diploma in Computer Science, Kashmir Govt Polytechnic), skills (Web Development, AI/ML, IoT, Cloud Computing, Cybersecurity, Blockchain, Python, Public Relations, Leadership, Communication, Critical Thinking, Time Management), and a short personal statement about my passion for tech and innovation.
+- “Contact”: Clearly display my phone number (9149559393), email (mirsajidd7@gmail.com), LinkedIn (https://www.linkedin.com/in/sajid-mir-508895314/7), and location (Whitefield, Bengaluru, India, 560067).
+- “Achievements”: Highlight awards like the Shining Star Award from CT University, Google Developer Groups membership, and sports medals.
+- “Hobbies”: Gym, sports, cooking, travelling, singing, building projects, and learning new tech.
+
+Each folder should open in a window with Linux-style UI elements (close, minimize, maximize). Use Linux-inspired icons and color schemes (like Ubuntu or Mint). Make the site responsive and interactive, giving users the feeling of using a Linux desktop. Add my photo or avatar on the desktop, and a “Terminal” window that greets visitors or summarizes my skills.
+
+[1] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/61864635/19628a8e-92a2-4150-ad5b-cb5adfb150c1/Sajid-resume2.pdf
